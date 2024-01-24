@@ -35,3 +35,4 @@ return new class extends Migration
         //
     }
 };
+//creati due file manualmente su php my admin
