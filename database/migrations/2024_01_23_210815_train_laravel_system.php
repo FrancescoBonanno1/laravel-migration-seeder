@@ -11,7 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('Treni', function (Blueprint $tabella){
+            $tabella->char('Azienda', 100);
+            $tabella->char('Stazione di Partenza',255);
+            $tabella->char('Stazione di Arrivo',255);
+            $tabella->dateTime('Orario di Partenza');
+            $tabella->dateTime('Orario di Arrivo');
+            $tabella->string('Codice Treno',10);
+            $tabella->integer('Numero Carrozze', 7);
+            $tabella->boolean('In orario');
+            $tabella->boolean('Cancellato');
+            $tabella->timestamps();
+           
+           
+        });
     }
 
     /**
